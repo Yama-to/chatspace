@@ -1,4 +1,4 @@
-# READMICKEY.md
+## READMICKEY.md
 
 ```
                                           MMMM
@@ -102,3 +102,49 @@
                                    VVVVVVVVVVVVVV
                                      VVVVVVVVV
 ```
+
+## README.md
+
+### Tables for entities
+
+#### USERS
+
+A table for users who can sign up/in/out, send chats, and make/invite users to groups.
+
+|attr|type|null|unique|index|foreign_key|
+|:--|:--|:--|:--|:--|:--|
+|id|primary_key|-|-|-|-|
+|name|string|false|true|true|-|
+|email|string|false|true|-|-|
+
+#### GROUPS
+
+A table for groups which can store chats/images and be used by users to make user groups.
+
+|attr|type|null|unique|index|foreign_key|
+|:--|:--|:--|:--|:--|:--|
+|id|primary_key|-|-|-|-|
+|name|string|false|true|-|-|
+
+#### CHATS
+
+A table for all the chats sent to each group.
+
+|attr|type|null|unique|index|foreign_key|
+|:--|:--|:--|:--|:--|:--|
+|id|primary_key|-|-|-|-|
+|body|text|-|-|-|-|
+|image|string|-|-|-|-|
+|user_id|references|false|-|-|true|
+|group_id|references|false|-|-|true|
+
+### Tables for associations
+
+#### USERS_GROUPS
+
+A many-to-many middletable for users and groups.
+
+|attr|type|null|unique|index|foreign_key|
+|:--|:--|:--|:--|:--|:--|
+|user_id|references|-|-|-|true|
+|group_id|references|false|-|-|true|
