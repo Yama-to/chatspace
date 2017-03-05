@@ -112,7 +112,7 @@
 A table for users who can sign up/in/out, send chats, and make/invite users to groups.
 
 |attr|type|null|unique|index|foreign_key|
-|:--|:--|:--|:--|
+|:--|:--|:--|:--|:--|:--|
 |id|primary_key|-|-|-|-|
 |name|string|false|true|true|-|
 |email|string|false|true|-|-|
@@ -122,7 +122,7 @@ A table for users who can sign up/in/out, send chats, and make/invite users to g
 A table for groups which can store chats/images and be used by users to make user groups.
 
 |attr|type|null|unique|index|foreign_key|
-|:--|:--|:--|:--|
+|:--|:--|:--|:--|:--|:--|
 |id|primary_key|-|-|-|-|
 |name|string|false|true|-|-|
 
@@ -131,7 +131,7 @@ A table for groups which can store chats/images and be used by users to make use
 A table for all the chats sent to each group.
 
 |attr|type|null|unique|index|foreign_key|
-|:--|:--|:--|:--|
+|:--|:--|:--|:--|:--|:--|
 |id|primary_key|-|-|-|-|
 |body|text|false|-|-|f-|
 |image|string|-|-|-|-|
@@ -145,6 +145,6 @@ A table for all the chats sent to each group.
 A many-to-many middletable for users and groups.
 
 |attr|type|null|unique|index|foreign_key|
-|:--|:--|:--|:--|
+|:--|:--|:--|:--|:--|:--|
 |user_id|references|false|-|-|true|
 |group_id|references|false|-|-|true|
