@@ -107,3 +107,8 @@ legend {
 #yui3-css-stamp.cssreset {
   display: none;
 }
+// to regist against an error caused by YUI3 reset CSS
+html {
+  background-color: transparent;
+  background-image: none;
+}
