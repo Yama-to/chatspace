@@ -133,7 +133,7 @@ A table for all the chats sent to each group.
 |attr|type|null|unique|index|foreign_key|
 |:--|:--|:--|:--|:--|:--|
 |id|primary_key|-|-|-|-|
-|body|text|false|-|-|f-|
+|body|text|-|-|-|-|
 |image|string|-|-|-|-|
 |user_id|references|false|-|-|true|
 |group_id|references|false|-|-|true|
@@ -146,5 +146,5 @@ A many-to-many middletable for users and groups.
 
 |attr|type|null|unique|index|foreign_key|
 |:--|:--|:--|:--|:--|:--|
-|user_id|references|false|-|-|true|
+|user_id|references|-|-|-|true|
 |group_id|references|false|-|-|true|
